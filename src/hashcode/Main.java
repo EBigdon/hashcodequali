@@ -18,5 +18,6 @@ public class Main {
         FileManager.readFile("testFile.txt");
         */
         ReadInputFile.getInputFromFile("a.txt");
+        Submission.submit(7);
     }
 }
