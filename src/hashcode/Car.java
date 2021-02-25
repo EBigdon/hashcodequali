@@ -2,8 +2,6 @@ package hashcode;
 
 import java.awt.*;
 
-private static Point currentTL;
-private static Point targetTL;
 
 public class Car extends cityPlan{
     Car(String[] pPath, int pNumberOfStreets, String[] pStreetsToPass) {
@@ -22,7 +20,11 @@ public class Car extends cityPlan{
             } catch (InterruptedException e) {
             }
         }
-        this.wait(s.time);
+        try {
+            this.wait(s.time);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         while(!s.queue.get(0).equals(this)){
             try {
                 this.wait(1000);
