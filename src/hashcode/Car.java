@@ -1,15 +1,17 @@
 package hashcode;
 
-private static trafficlight currentTL;
-private static trafficlight targetTL;
+import java.awt.*;
+
+private static Point currentTL;
+private static Point targetTL;
 
 public class Car {
-    void Car(){
+    void Car(Point target, Point current){
 
     }
 
     void driveStr(Street s){
-        while (trafficlight.canDrive().equals(false) && s.queue[0].equals(this))
+        while (Point == false)
         {
             try {
                 this.wait(1000);
@@ -17,11 +19,17 @@ public class Car {
             }
         }
         this.wait(s.time);
-        currentTL = s.target;
-        check();
+        while(!s.queue.get(0).equals(this)){
+            try {
+                this.wait(1000);
+            } catch (InterruptedException e) {
+            }
+        }
+        currentTL = s.goesTo;
+        goesOn();
     }
 
-    boolean check(){
+    boolean goesOn(){
         if(currentTL == targetTL){
             return false;
         }
