@@ -2,10 +2,9 @@ package hashcode;
 
 public class trafficlight {
 
-    public static void canDrive()
+    public static void canDrive(int time)
     {
         boolean light = false; //Traffic Light is red
-        int time = 0;
         if(time == 0)
         {
             light = true;

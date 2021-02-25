@@ -7,6 +7,7 @@ public class Main {
      * @param args standard arguments
      */
     public static void main(final String[] args) {
+        /*
         System.out.println("Hello");
         FileManager.createFile("testFile.txt");
         FileManager.clearFile("testFile.txt");
@@ -15,5 +16,7 @@ public class Main {
         FileManager.writeIntoFile("testFile.txt", "Test line 2");
         FileManager.writeIntoFile("testFile.txt", "Test line 3");
         FileManager.readFile("testFile.txt");
+        */
+        ReadInputFile.getInputFromFile("a.txt");
     }
 }
