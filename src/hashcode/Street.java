@@ -17,7 +17,6 @@ public class Street extends cityPlan{
 
     void Street(Point gt,int T){
         goesTo = gt;
-        time = T * 1000;
     }
 
     public static void addCarQueue(Car c){
@@ -26,14 +25,4 @@ public class Street extends cityPlan{
     public static void deleteCarQueue(){
         queue.remove(0);
     }
-
-    public static void canDrive(int time)
-    {
-        boolean light = false; //Traffic Light is red
-        if(time == 0)
-        {
-            light = true;
-        }
-    }
-
 }

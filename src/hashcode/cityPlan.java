@@ -12,6 +12,9 @@ public class cityPlan {
     public static String streetName;
     public static int L;
 
+    public static String [] path;
+    public static int numberOfStreets;
+    public static String[] streetsToPass;
 
     cityPlan(int pT, int pNumberIntersection, int pNumberStreets, int pNumberCars, int pScoreForReachingEnd) {
         T = pT;
@@ -26,5 +29,11 @@ public class cityPlan {
         endIntersection = pEndIntersection;
         streetName = pStreetName;
         L = pL;
+    }
+
+    cityPlan(String [] pPath, int pNumberOfStreets, String[] pStreetsToPass) {
+        path = pPath;
+        numberOfStreets = pNumberOfStreets;
+        streetsToPass = pStreetsToPass;
     }
 }

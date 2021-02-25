@@ -37,9 +37,9 @@ public class ReadInputFile extends cityPlan{
 
     public static void getCars(final String lines[], final int cars, final int currentLine) {
         for(int i = currentLine; i < currentLine + cars; i++) {
-            String[] path = lines[i].split(" ");
-            int numberOfStreets = Integer.parseInt(path[0]);
-            String[] streetsToPass = new String[numberOfStreets];
+            path = lines[i].split(" ");
+            numberOfStreets = Integer.parseInt(path[0]);
+            streetsToPass = new String[numberOfStreets];
             for(int j = 1; j <= numberOfStreets; j++) {
                 streetsToPass[j-1] = path[j];
             }

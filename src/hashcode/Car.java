@@ -5,7 +5,11 @@ import java.awt.*;
 private static Point currentTL;
 private static Point targetTL;
 
-public class Car {
+public class Car extends cityPlan{
+    Car(String[] pPath, int pNumberOfStreets, String[] pStreetsToPass) {
+        super(pPath, pNumberOfStreets, pStreetsToPass);
+    }
+
     void Car(Point target, Point current){
 
     }
