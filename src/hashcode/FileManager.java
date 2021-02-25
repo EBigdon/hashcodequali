@@ -39,14 +39,13 @@ public class FileManager {
     public static String readFile(final String fileName) {
         StringBuilder retVal = new StringBuilder();
         try {
-            File myObj = new File(fileName);
-            Scanner myReader = new Scanner(myObj);
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                retVal.append(data);
+            Scanner reader = new Scanner(new File(fileName));
+            while (reader.hasNextLine()) {
+                String data = reader.nextLine();
+                retVal.append(data + "\n");
                 System.out.println(data);
             }
-            myReader.close();
+            reader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
@@ -64,9 +63,9 @@ public class FileManager {
     public static boolean writeIntoFile(
             final String fileName, final String input) {
         try {
-            FileWriter myWriter = new FileWriter(fileName, true);
-            myWriter.write(input + "\n");
-            myWriter.close();
+            FileWriter writer = new FileWriter(fileName, true);
+            writer.write(input + "\n");
+            writer.close();
             return true;
         } catch (IOException e) {
             System.out.println("An error occurred.");
