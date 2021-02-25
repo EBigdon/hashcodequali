@@ -1,6 +1,7 @@
 package hashcode;
 
-public class ReadInputFile extends cityPlan{
+public class ReadInputFile extends cityPlan {
+
 
     ReadInputFile(int pT, int pNumberIntersection, int pNumberStreets, int pNumberCars, int pScoreForReachingEnd) {
         super(pT, pNumberIntersection, pNumberStreets, pNumberCars, pScoreForReachingEnd);
