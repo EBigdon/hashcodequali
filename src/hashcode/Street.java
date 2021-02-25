@@ -14,7 +14,6 @@ public class Street extends cityPlan{
         super(pStartIntersection, pEndIntersection, pStreetName, pL);
     }
 
-
     void Street(Point gt,int T){
         goesTo = gt;
     }
