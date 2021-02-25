@@ -11,7 +11,7 @@ public class Car {
     }
 
     void driveStr(Street s){
-        while (Point.equals(false))
+        while (Point == false)
         {
             try {
                 this.wait(1000);
@@ -25,9 +25,8 @@ public class Car {
             } catch (InterruptedException e) {
             }
         }
-
         currentTL = s.goesTo;
-        check();
+        goesOn();
     }
 
     boolean goesOn(){
