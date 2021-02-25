@@ -15,10 +15,6 @@ public class ReadInputFile extends cityPlan {
         numberStreets = Integer.parseInt(lines[0].split(" ")[2]);
         numberOfCars = Integer.parseInt(lines[0].split(" ")[3]);
         scoreForReachingEnd = Integer.parseInt(lines[0].split(" ")[4]);
-        System.out.println(T); // duration of simulation
-        System.out.println(numberIntersection);
-        System.out.println(numberOfCars);
-        System.out.println(scoreForReachingEnd);
         getStreets(lines,numberStreets);
         getCars(lines, numberOfCars , 1 + numberStreets);
     }
@@ -29,10 +25,6 @@ public class ReadInputFile extends cityPlan {
             endIntersection = Integer.parseInt(lines[i].split(" ")[1]);
             streetName = lines[i].split(" ")[2];
             L = Integer.parseInt(lines[i].split(" ")[3]);
-            System.out.println(startIntersection);
-            System.out.println(endIntersection);
-            System.out.println(streetName);
-            System.out.println(L +"\n");
         }
     }
 
