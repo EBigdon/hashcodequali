@@ -1,17 +1,21 @@
 package hashcode;
 
-public class ReadInputFile {
+public class ReadInputFile extends cityPlan{
+
+    ReadInputFile(int pT, int pNumberIntersection, int pNumberStreets, int pNumberCars, int pScoreForReachingEnd) {
+        super(pT, pNumberIntersection, pNumberStreets, pNumberCars, pScoreForReachingEnd);
+    }
 
     public static void getInputFromFile(final String fileName){
         String output = FileManager.readFile(fileName);
         String lines[] = output.split("\n");
-        int duration = Integer.parseInt(lines[0].split(" ")[0]);
-        int numberIntersection = Integer.parseInt(lines[0].split(" ")[1]);
-        int numberStreets = Integer.parseInt(lines[0].split(" ")[2]);
-        int numberOfCars = Integer.parseInt(lines[0].split(" ")[3]);
-        int scoreForReachingEnd = Integer.parseInt(lines[0].split(" ")[4]);
+        T= Integer.parseInt(lines[0].split(" ")[0]);
+        numberIntersection = Integer.parseInt(lines[0].split(" ")[1]);
+        numberStreets = Integer.parseInt(lines[0].split(" ")[2]);
+        numberOfCars = Integer.parseInt(lines[0].split(" ")[3]);
+        scoreForReachingEnd = Integer.parseInt(lines[0].split(" ")[4]);
+        System.out.println(T);
         System.out.println(numberIntersection);
-        System.out.println(duration);
         System.out.println(numberOfCars);
         System.out.println(scoreForReachingEnd);
         getStreets(lines,numberStreets);
